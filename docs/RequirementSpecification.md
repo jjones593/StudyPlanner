@@ -35,3 +35,12 @@ The application should prevent invalid information from being entered.
 The application should work consistently accross supported devices/platforms.
 
 ## Constraints
+
+### C1
+Users must manually enter their own courses, test, assignments, and notes. The system will not retrieve grades automatically. 
+### C2
+The project will focus on core study planning, it will not be a complete learning system.
+### C3
+The project must be completed by the assigned team members.
+### C4
+The application must protect user information and not store sensitive information unnecessarily.
