@@ -3,7 +3,7 @@
 ## Functional Requirements
 
 ### FR1 Course Management
-The system shall allow users be able to add, edit, and delete courses.
+The system shall allow users to be able to add, edit, and delete courses.
 ### FR2 Assignments and Events
 The system shall allow users to add tests, assignments, and events. 
 ### FR3 Calendar
