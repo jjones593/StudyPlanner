@@ -37,15 +37,15 @@ This document identifies risks that may affect the successful completion of the 
 
 | Date | Changes Made | Updated By |
 |--------|-------------|------------|
-| | | |
-| | | |
-| | | |
+| YYYY-MM-DD | | |
+| YYYY-MM-DD | | |
+| YYYY-MM-DD | | |
 
 ## Lessons Learned
 | Risk ID | Outcome | Lesson Learned |
 |----------|----------|----------------|
-| | | | 
-| | | |
-| | | |
+| R-XX | | | 
+| R-XX | | |
+| R-XX | | |
  
 
