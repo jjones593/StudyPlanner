@@ -22,8 +22,10 @@ this will also be able to show deadlines for assignments, test dates, etc.
 - A reminder feature that can notify when an evaluation is coming up.
 - An area where you can enter grades for individual courses.
 - An area for making notes.
-- 
+  
 ## Technologies Used
+- Python/Java
+- GitHub
 
 ## Scrum Process
 This project follows Scrum practices using:
