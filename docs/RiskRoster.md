@@ -11,3 +11,27 @@ This document identifies risks that may affect the successful completion of the 
 - Medium (M): May occur during the project
 - High (H): Likely to occur during the project
 
+### Impact
+
+- Low (L): Minor effect on project progress
+- Medium (M): Noticeable impact on schedule, quality, or scope
+- High (H): Significant impact on project success
+
+### Risk Status Definitions
+
+- Open: Risk currently exists and requires monitoring.
+- Mitigated: Actions have reduced the likelihood or impact.
+- Closed: Risk is no longer relevant.
+- Occurred: Risk occurred and required response actions.
+
+## Risk Roster
+
+| Risk ID | Category | Risk Description | Probability | Impact | Mitigation Strategy | Owner | Status |
+|----------|------------|-----------------|-------------|---------|---------------------|--------|---------|
+| R-01 | | | | | | | |
+| R-02 | | | | | | | |
+| R-03 | | | | | | | |
+| R-04 | | | | | | | |
+
+
+
