@@ -6,8 +6,8 @@
 The system shall allow users be able to add, edit, and delete courses.
 ### FR2 Assignments and Events
 The system shall allow users to add tests, assignments, and events. 
-### FR3 Calender
-The system shall display tests, assignments, and events in a calender.
+### FR3 Calendar
+The system shall display tests, assignments, and events in a calendar.
 ### FR4 Reminders
 The system shall allow users to set reminders for upcoming deadlines.
 ### FR5 Notifications
