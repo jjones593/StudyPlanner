@@ -33,5 +33,19 @@ This document identifies risks that may affect the successful completion of the 
 | R-03 | | | | | | | |
 | R-04 | | | | | | | |
 
+## Risk Review History
 
+| Date | Changes Made | Updated By |
+|--------|-------------|------------|
+| | | |
+| | | |
+| | | |
+
+## Lessons Learned
+| Risk ID | Outcome | Lesson Learned |
+|----------|----------|----------------|
+| | | | 
+| | | |
+| | | |
+ 
 
