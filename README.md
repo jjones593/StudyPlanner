@@ -16,20 +16,22 @@ planning their week.
 ## Key Features
 This application will have:
 
-• A place where students are able to add their current courses.
+- A place where students are able to add their current courses.
 
-• A calendar which will show the times throughout the week a student has a particular class/lab,
+- A calendar which will show the times throughout the week a student has a particular class/lab,
 this will also be able to show deadlines for assignments, test dates, etc.
 
-• A reminder feature that can notify when an evaluation is coming up.
+- A reminder feature that can notify when an evaluation is coming up.
 
-• An area where you can enter grades for individual courses.
+- An area where you can enter grades for individual courses.
 
-• An area for making notes.
+- An area for making notes.
 
 ## Technologies Used
 
 ## Scrum Process
 
 ## Repository Structure
-
+- /docs Scrum documents
+- /src Application source code
+- /test Test code
