@@ -29,9 +29,9 @@ This document identifies risks that may affect the successful completion of the 
 | Risk ID | Category | Risk Description | Probability | Impact | Mitigation Strategy | Owner | Status |
 |----------|------------|-----------------|-------------|---------|---------------------|--------|---------|
 | R-01 |Schedule |A team member is unavailable near the deadline |Medium |High |Share tasks and document work |Thomas |Closed |
-| R-02 | | | | | | | |
-| R-03 | | | | | | | |
-| R-04 | | | | | | | |
+| R-02 |Scope |Requirements grow beyond what can be finished |High |High |Prioritize stories with sprint-1,2 scope |Jake |Closed |
+| R-03 |Technical |Code or data is lost because work is not backed up |Low |High |Create backups |Anna |Mitigated |
+| R-04 |Quality |Features are built without enough testing |Medium |High |Test each story against its acceptance criteria |All |Open |
 
 ## Risk Review History
 
