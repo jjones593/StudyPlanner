@@ -28,7 +28,7 @@ This document identifies risks that may affect the successful completion of the 
 
 | Risk ID | Category | Risk Description | Probability | Impact | Mitigation Strategy | Owner | Status |
 |----------|------------|-----------------|-------------|---------|---------------------|--------|---------|
-| R-01 | | | | | | | |
+| R-01 |Schedule |A team member is unavailable near the deadline |Medium |High |Share tasks and document work |Thomas |Closed |
 | R-02 | | | | | | | |
 | R-03 | | | | | | | |
 | R-04 | | | | | | | |
