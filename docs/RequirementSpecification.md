@@ -9,9 +9,9 @@ The system shall allow users to add tests, assignments, and events.
 ### FR-03 Calendar
 The system shall display tests, assignments, and events in a calendar.
 ### FR-04 Reminders
-The system shall allow users to set reminders for upcoming deadlines.
+The system shall allow users to set reminders for upcoming assessment deadlines.
 ### FR-05 Notifications
-The system shall provide notifications for upcoming deadlines.
+The system shall provide notifications for upcoming assessment deadlines.
 ### FR-06 Grades Entry
 The system shall allow users to manually enter grades.
 ### FR-07 View Grades
@@ -30,7 +30,7 @@ The application should respond quickly to user actions.
 ### NFR-02 Storing Information Reliably
 User information should be stored reliably.
 ### NFR-03 Invalid Information
-The application should prevent invalid information from being entered.
+The application should prevent invalid/duplicate information from being entered.
 ### NFR-04 Supported Devices
 The application should work consistently accross supported devices/platforms.
 
