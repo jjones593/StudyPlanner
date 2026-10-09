@@ -7,7 +7,7 @@ This document identifies risks that may affect the successful completion of the 
 
 ### Probability
 
-- Low (L): Unlikely to occur.
+- Low (L): Unlikely to occur during the project.
 - Medium (M): May occur during the project.
 - High (H): Likely to occur during the project.
 
@@ -15,7 +15,7 @@ This document identifies risks that may affect the successful completion of the 
 
 - Low (L): Minor effect on project progress.
 - Medium (M): Noticeable impact on schedule, quality, or scope.
-- High (H): Significant impact on project success.
+- High (H): Significant impact on project progress/success.
 
 ### Risk Status Definitions
 
