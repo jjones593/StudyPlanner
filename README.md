@@ -24,7 +24,7 @@ this will also be able to show deadlines for assignments, test dates, etc.
 - An area for making notes.
   
 ## Technologies Used
-- Python/Java
+- Python
 - GitHub
 
 ## Scrum Process
