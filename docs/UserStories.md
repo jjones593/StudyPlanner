@@ -25,4 +25,16 @@ FR-01 Course Management
 ### Story Points
 3
 
-## US-03
+## US-03: Add Calendar Event
+As a student, I want to add assignments and events to my calendar.
+### Related Requirement
+FR-02: Assignments and Events
+### Acceptance Criteria
+- The user can create a new calendar event.
+- The user can enter an event title.
+- The user can select a date.
+- The user can enter a time.
+- The user can associate the event with a course.
+- The event appears on the calendar after being saved.
+### Story Points
+5
