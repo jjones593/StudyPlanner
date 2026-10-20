@@ -52,4 +52,18 @@ FR-03: Calendar
 ### Story Points
 5
 
-## US-05:
+## US-05: Edit/ Delete Calendar Event
+As a student, I want to edit or delete calendar events.
+### Related Requirement
+FR-02: Assignments and Events
+### Acceptance Criteria
+- The user can select an existing calendar event.
+- The user can edit the event information.
+- The user can save changes to the event.
+- The user can delete an event.
+- The system asks for confirmation before deleting an event.
+- Changes are reflected on the calendar.
+### Story Points
+3
+
+## US-06: 
