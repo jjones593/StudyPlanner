@@ -66,4 +66,17 @@ FR-02: Assignments and Events
 ### Story Points
 3
 
-## US-06: 
+## US-06: Set Reminders
+As a student, I want to set reminders for assignments and events.
+### Related Requirement
+FR-04: Reminders
+### Acceptance Criteria
+- The user can create a reminder for an assignment or event.
+- The user can select when they want to be reminded.
+- The reminder is associated with the correct assignment or event.
+- The user can edit a reminder.
+- The user can delete a reminder.
+### Story Points
+5
+
+## US-07: 
