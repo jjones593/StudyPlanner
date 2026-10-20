@@ -38,3 +38,18 @@ FR-02: Assignments and Events
 - The event appears on the calendar after being saved.
 ### Story Points
 5
+
+## US-04: View Calendar
+As a student, I want to view my assignments and events on a calendar.
+### Related Requirement
+FR-03: Calendar
+### Acceptance Criteria
+- The user can open the calendar.
+- The calendar displays the user's saved events.
+- Events display their title and date.
+- The user can navigate between different dates.
+- The user can distinguish between different events on the calendar.
+### Story Points
+5
+
+## US-05:
