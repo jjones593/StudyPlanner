@@ -106,4 +106,17 @@ FR-06: Grade Management
 ### Story Points
 3
 
-## US-09
+## US-09: View Grades
+As a student, I want to view my grades.
+### Related Requirement
+FR-07: Grade Viewing
+### Acceptance Criteria
+- The user can view grades for each course.
+- Grades are displayed with the associated assessment.
+- The user can identify which course each grade belongs to.
+- The system displays saved grades accurately.
+- The user can view their grades after restarting the application.
+### Story Points
+3
+
+## US-10: 
