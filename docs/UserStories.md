@@ -134,3 +134,15 @@ FR-08: Notes
 3
 
 ## US-11: Edit/ Delete Notes
+As a student, I want to edit and delete notes.
+### Related Requirement
+FR-08: Notes
+### Acceptance Criteria
+- The user can select an existing note.
+- The user can edit the note title.
+- The user can edit the note content.
+- The user can save changes to a note.
+- The user can delete a note.
+- The system asks for confirmation before deleting a note.
+### Story Points
+3
