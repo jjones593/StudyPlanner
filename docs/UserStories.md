@@ -119,4 +119,18 @@ FR-07: Grade Viewing
 ### Story Points
 3
 
-## US-10: 
+## US-10: Create Notes
+As a student, I want to create notes.
+### Related Requirement
+FR-08: Notes
+### Acceptance Criteria
+- The user can create a new note.
+- The user can enter a title for the note.
+- The user can enter the note content.
+- The user can associate a note with a course.
+- The user can save the note.
+- The saved note can be viewed later.
+### Story Points
+3
+
+## US-11: Edit/ Delete Notes
