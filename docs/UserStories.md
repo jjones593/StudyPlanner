@@ -79,4 +79,17 @@ FR-04: Reminders
 ### Story Points
 5
 
-## US-07: 
+## US-07: Receive Notifications
+As a student, I want to receive notifications for upcoming deadlines so that I know when schoolwork is due.
+### Related Requirement
+FR-05: Notifications
+### Acceptance Criteria
+- The system checks for upcoming reminders.
+- The user receives a notification when a reminder is due.
+- The notification identifies the related assignment or event.
+- The notification includes the relevant deadline.
+- Notifications are only sent for active reminders.
+### Story Points
+5
+
+## US-08: 
