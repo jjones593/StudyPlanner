@@ -92,4 +92,18 @@ FR-05: Notifications
 ### Story Points
 5
 
-## US-08: 
+## US-08: Enter Grades
+As a student, I want to manually enter my grades.
+### Related Requirement
+FR-06: Grade Management
+### Acceptance Criteria
+- The user can select a course.
+- The user can enter a grade.
+- The user can enter the assessment name.
+- The user can save the grade.
+- The grade is associated with the correct course.
+- The system prevents invalid grade values from being entered.
+### Story Points
+3
+
+## US-09
