@@ -58,17 +58,17 @@ customnotes_buttons.pack(pady = 10)
 
 addschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Add", width = 10, command = lambda: addSchoolCourse(mainwindow, schoolcourses_list))
 addschoolcourse_button.pack(side = "left", padx = 5)
-addcustomnotes_button = tk.Button(customnotes_buttons, text = "Add", width = 10)
+addcustomnotes_button = tk.Button(customnotes_buttons, text = "Add", width = 10, command = lambda: addCustomNote(mainwindow, customnotes_list))
 addcustomnotes_button.pack(side = "left", padx = 5)
 
 editschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Edit", width = 10, command = lambda: editSchoolCourse(mainwindow, schoolcourses_list))
 editschoolcourse_button.pack(side = "left", padx = 5)
-editcustomnotes_button = tk.Button(customnotes_buttons, text = "Edit", width = 10)
+editcustomnotes_button = tk.Button(customnotes_buttons, text = "Edit", width = 10, command = lambda: editCustomNote(mainwindow, customnotes_list))
 editcustomnotes_button.pack(side = "left", padx = 5)
 
 deleteschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Delete", width = 10, command = lambda: deleteSchoolCourse(mainwindow, schoolcourses_list))
 deleteschoolcourse_button.pack(side = "left", padx = 5)
-deletecustomnotes_button = tk.Button(customnotes_buttons, text = "Delete", width = 10)
+deletecustomnotes_button = tk.Button(customnotes_buttons, text = "Delete", width = 10, command = lambda: deleteCustomNote(mainwindow, customnotes_list))
 deletecustomnotes_button.pack(side = "left", padx = 5)
 
 
