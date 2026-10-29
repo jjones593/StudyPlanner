@@ -1,4 +1,4 @@
-# Sprint 1 Review
+# Sprint 2 Review
 
 ## Completed Stories
 
