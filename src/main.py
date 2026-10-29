@@ -5,6 +5,9 @@ import json
 from pathlib import Path
 from editCourse import editSchoolCourse
 from deleteCourse import deleteSchoolCourse
+from addNote import addCustomNote
+from editNote import editCustomNote
+from deleteNote import deleteCustomNote
 
 ##Code for creating our main window with its title and size 
 mainwindow = tk.Tk()
@@ -36,13 +39,16 @@ schoolcourses_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
 customnotes_list = tk.Listbox(customnotes_tab, font = ("Arial", 12), selectmode = tk.SINGLE, exportselection = False)
 customnotes_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
 
-##saved courses from json file
+##saved courses and notes from json file
 datafile = Path(__file__).with_name("data.json")
 with open(datafile, "r") as file:
     data=json.load(file)
 
 for course in data ["courses"]:
     schoolcourses_list.insert(tk.END, course["name"] + course["code"])
+
+for note in data["notes"]:
+    customnotes_list.insert(tk.END, note["title"])
 
 ##Add edit and delete button on both tabs
 schoolcourses_buttons = tk.Frame(schoolcourses_tab)
