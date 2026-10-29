@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from addCourse import addSchoolCourse 
+from addCourse import addSchoolCourse
 import json
 from pathlib import Path
 
