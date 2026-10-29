@@ -1,4 +1,8 @@
 import tkinter as tk
+import json
+from pathlib import Path
+
+datafile = Path(__file__).with_name("data.json")
 
 def addSchoolCourse(mainwindow, schoolcourses_list):
     schoolcoursewindow = tk.Toplevel(mainwindow)
@@ -29,6 +33,14 @@ def addSchoolCourse(mainwindow, schoolcourses_list):
     def saveSchoolCourse():
         schoolcoursename = schoolcoursename_entry.get()
         schoolcoursecode = schoolcoursecode_entry.get()
+
+        with open(datafile, "r") as file:
+            data = json.load(file)
+
+        data["courses"].append({"name":schoolcoursename, "code": schoolcoursecode})
+
+        with open(datafile, "w") as file: 
+            json.dump(data, file, indent = 5)
 
         schoolcourses_list.insert(tk.END, schoolcoursename + schoolcoursecode)
         schoolcoursewindow.destroy()
