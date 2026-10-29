@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from addCourse import addSchoolCourse 
+import json
+from pathlib import Path
 
 ##Code for creating our main window with its title and size 
 mainwindow = tk.Tk()
@@ -31,6 +33,14 @@ schoolcourses_list = tk.Listbox(schoolcourses_tab, font = ("Arial", 12), selectm
 schoolcourses_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
 customnotes_list = tk.Listbox(customnotes_tab, font = ("Arial", 12), selectmode = tk.SINGLE, exportselection = False)
 customnotes_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
+
+##saved courses from json file
+datafile = Path(__file__).with_name("data.json")
+with open(datafile, "r") as file:
+    data=json.load(file)
+
+for course in data ["courses"]:
+    schoolcourses_list.insert(tk.END, course["name"] + course["code"])
 
 ##Add edit and delete button on both tabs
 schoolcourses_buttons = tk.Frame(schoolcourses_tab)
