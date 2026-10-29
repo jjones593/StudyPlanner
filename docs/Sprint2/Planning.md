@@ -1,5 +1,5 @@
 # Sprint 1 Planning
 ## Sprint Goal 
-Establish project foundation and basic features
+Establish Calendar and all of its Features
 
 ## Selected Product Backlog Tasks
