@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import ttk
-from addCourse import addSchoolCourse
+from addCourse import addSchoolCourse 
 import json
 from pathlib import Path
+from editCourse import editSchoolCourse
+from deleteCourse import deleteSchoolCourse
 
 ##Code for creating our main window with its title and size 
 mainwindow = tk.Tk()
@@ -53,12 +55,12 @@ addschoolcourse_button.pack(side = "left", padx = 5)
 addcustomnotes_button = tk.Button(customnotes_buttons, text = "Add", width = 10)
 addcustomnotes_button.pack(side = "left", padx = 5)
 
-editschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Edit", width = 10)
+editschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Edit", width = 10, command = lambda: editSchoolCourse(mainwindow, schoolcourses_list))
 editschoolcourse_button.pack(side = "left", padx = 5)
 editcustomnotes_button = tk.Button(customnotes_buttons, text = "Edit", width = 10)
 editcustomnotes_button.pack(side = "left", padx = 5)
 
-deleteschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Delete", width = 10)
+deleteschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Delete", width = 10, command = lambda: deleteSchoolCourse(mainwindow, schoolcourses_list))
 deleteschoolcourse_button.pack(side = "left", padx = 5)
 deletecustomnotes_button = tk.Button(customnotes_buttons, text = "Delete", width = 10)
 deletecustomnotes_button.pack(side = "left", padx = 5)
