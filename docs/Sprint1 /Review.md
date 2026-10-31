@@ -13,7 +13,7 @@
   
 ## Stakeholder Feedback
 - Display an error message when a course name or code is left blank
-- Show a message when a course or not is saved
+- Show a message when a course is not saved
   
 ## Velocity
 - 12 Story Points
