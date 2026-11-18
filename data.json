@@ -1,0 +1,1 @@
+{"courses": [{"name": "programming", "code": "cp1200"}], "notes": [{"title": "hi", "content": "hello"}, {"title": "hello", "content": "hello"}], "events": [{"title": "Midterm", "date": "2026-11-27", "time": "11:00AM", "course": "Software Engineering"}, {"title": "Project Due", "date": "2026-11-28", "time": "", "course": ""}]}
