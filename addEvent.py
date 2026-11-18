@@ -49,7 +49,7 @@ def addEvent(mainwindow, selecteddate, showCalendar):
     savebutton.pack(pady = 15)
 
     cancelbutton = tk.Button(calendareventwindow, text = "Cancel", command = calendareventwindow.destroy)
-    cancelbutton.pack
+    cancelbutton.pack()
 
 
 
