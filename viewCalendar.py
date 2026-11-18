@@ -1,6 +1,9 @@
 import tkinter as tk 
 import calendar
 from datetime import datetime 
+from addEvent import addEvent
+import json
+from pathlib import Path
 
 def viewCalendar(calendar_tab):
     today = datetime.now()
@@ -23,6 +26,11 @@ def viewCalendar(calendar_tab):
      
      displayyear = selectedmonth[0]
      displaymonth = selectedmonth[1]
+
+     datafile = Path(__file__).with_name("data.json")
+     with open(datafile, "r") as file:
+        data = json.load(file)
+
      monthtitle.config(text = calendar.month_name[displaymonth] + str(displayyear))
 ##day headings
      daynames = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -35,8 +43,14 @@ def viewCalendar(calendar_tab):
         for col in range(7):
            day = monthweeks[row][col]
            if day != 0:
-              datelabel = tk.Label(calendargrid, text = day, relief = "solid", borderwidth = 1)
-              datelabel.grid(row = row + 1, column = col, sticky = "nsew", padx = 2, pady = 2)
+              selecteddate = str(displayyear) + "-" + str(displaymonth) + "-" + str(day)
+              buttontext = str(day)
+              for event in data["events"]:
+                 if event["date"] == selecteddate:
+                    buttontext = buttontext + "\n" + event["title"] + "\n" + event["time"]           
+              datebutton = tk.Button(calendargrid, text = buttontext, command = lambda date = selecteddate: addEvent(calendar_tab, date, showCalendar))
+              datebutton.grid(row = row + 1, column = col, sticky = "nsew", padx = 3, pady = 3)
+    
     for col in range(7):
        calendargrid.grid_columnconfigure(col, weight = 1)
     for row in range(1, 7):
