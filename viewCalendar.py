@@ -4,6 +4,8 @@ from datetime import datetime
 from addEvent import addEvent
 import json
 from pathlib import Path
+from editEvent import editCalendarEvent
+from deleteEvent import deleteCalendarEvent
 
 def viewCalendar(calendar_tab):
     today = datetime.now()
@@ -18,6 +20,30 @@ def viewCalendar(calendar_tab):
 ##frame for dates    
     calendargrid=tk.Frame(monthlycalendar)
     calendargrid.pack(fill = "both", expand = True)
+
+    def selectEvent(selecteddate):
+       calendareventwindow = tk.Toplevel(calendar_tab)
+       calendareventwindow.title("Events")
+       calendareventwindow.geometry("300x300")
+
+       calendareventlist = tk.Listbox(calendareventwindow, width = 40)
+       calendareventlist.pack(pady = 15)
+
+       datafile = Path(__file__).with_name("data.json")
+       with open(datafile, "r") as file:
+          data = json.load(file)
+
+          for event in data["events"]:
+             if event["date"] == selecteddate:
+                calendareventlist.insert(tk.END, event["title"])
+
+          addbutton = tk.Button(calendareventwindow, text = "Add", command = lambda: addEvent(calendar_tab, selecteddate, showCalendar))
+          addbutton.pack(pady = 5)
+          editbutton = tk.Button(calendareventwindow, text = "Edit", command = lambda: editCalendarEvent(calendareventwindow, selecteddate, calendareventlist, showCalendar))
+          editbutton.pack(pady = 5)
+          deletebutton = tk.Button(calendareventwindow, text = "Delete", command = lambda: deleteCalendarEvent(selecteddate, calendareventlist, showCalendar))
+          deletebutton.pack(pady = 5)
+       
 
     def showCalendar():
     ##this will destroy the current page month we are when we switch to the next so only one month displays at a ti
@@ -48,7 +74,7 @@ def viewCalendar(calendar_tab):
               for event in data["events"]:
                  if event["date"] == selecteddate:
                     buttontext = buttontext + "\n" + event["title"] + "\n" + event["time"]           
-              datebutton = tk.Button(calendargrid, text = buttontext, command = lambda date = selecteddate: addEvent(calendar_tab, date, showCalendar))
+              datebutton = tk.Button(calendargrid, text = buttontext, command = lambda date = selecteddate: selectEvent(date))
               datebutton.grid(row = row + 1, column = col, sticky = "nsew", padx = 3, pady = 3)
     
     for col in range(7):
