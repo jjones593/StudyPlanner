@@ -8,6 +8,8 @@ from deleteCourse import deleteSchoolCourse
 from addNote import addCustomNote
 from editNote import editCustomNote
 from deleteNote import deleteCustomNote
+from viewCalendar import viewCalendar
+from grades import viewGrades
 
 ##Code for creating our main window with its title and size 
 mainwindow = tk.Tk()
@@ -24,9 +26,13 @@ tab = ttk.Notebook(mainwindow)
 tab.pack(fill = "both", expand = True, padx = 20, pady = (0, 20))
 schoolcourses_tab = tk.Frame(tab)
 customnotes_tab = tk.Frame(tab)
+calendar_tab = tk.Frame(tab)
+grades_tab = tk.Frame(tab)
+
 tab.add(schoolcourses_tab, text = "Courses")
 tab.add(customnotes_tab, text = "Notes")
-
+tab.add(calendar_tab, text = "Calendar")
+tab.add(grades_tab, text = "Grades")
 ##Creating the courses and notes headings within there seperate tabs
 schoolcourses_heading = tk.Label(schoolcourses_tab, text = "courses", font = ("Arial", 12, "bold"))
 schoolcourses_heading.pack(pady = 15)
@@ -36,8 +42,13 @@ customnotes_heading.pack(pady = 15)
 ##Creating the lists to be able to Display added courses and added notes
 schoolcourses_list = tk.Listbox(schoolcourses_tab, font = ("Arial", 12), selectmode = tk.SINGLE, exportselection = False)
 schoolcourses_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
+
 customnotes_list = tk.Listbox(customnotes_tab, font = ("Arial", 12), selectmode = tk.SINGLE, exportselection = False)
 customnotes_list.pack(fill = "both", expand = True, padx = 20, pady = (0,20))
+
+calendar_heading = tk.Label(calendar_tab, text = "calendar", font = ("Arial", 12, "bold"))
+calendar_heading.pack(pady = 15)
+
 
 ##saved courses and notes from json file
 datafile = Path(__file__).with_name("data.json")
@@ -58,20 +69,24 @@ customnotes_buttons.pack(pady = 10)
 
 addschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Add", width = 10, command = lambda: addSchoolCourse(mainwindow, schoolcourses_list))
 addschoolcourse_button.pack(side = "left", padx = 5)
+
 addcustomnotes_button = tk.Button(customnotes_buttons, text = "Add", width = 10, command = lambda: addCustomNote(mainwindow, customnotes_list))
 addcustomnotes_button.pack(side = "left", padx = 5)
 
 editschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Edit", width = 10, command = lambda: editSchoolCourse(mainwindow, schoolcourses_list))
 editschoolcourse_button.pack(side = "left", padx = 5)
+
 editcustomnotes_button = tk.Button(customnotes_buttons, text = "Edit", width = 10, command = lambda: editCustomNote(mainwindow, customnotes_list))
 editcustomnotes_button.pack(side = "left", padx = 5)
 
 deleteschoolcourse_button = tk.Button(schoolcourses_buttons, text = "Delete", width = 10, command = lambda: deleteSchoolCourse(mainwindow, schoolcourses_list))
 deleteschoolcourse_button.pack(side = "left", padx = 5)
+
 deletecustomnotes_button = tk.Button(customnotes_buttons, text = "Delete", width = 10, command = lambda: deleteCustomNote(mainwindow, customnotes_list))
 deletecustomnotes_button.pack(side = "left", padx = 5)
 
-
+viewCalendar(calendar_tab)
+viewGrades(grades_tab)
 
 
 
