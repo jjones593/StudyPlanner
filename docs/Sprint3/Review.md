@@ -10,5 +10,5 @@
 ## Stakeholder Feedback
 
 ## Velocity
-Total Story Points: 
+Total Story Points: 16
 
