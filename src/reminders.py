@@ -9,16 +9,13 @@ datafile = Path(__file__).with_name("data.json")
 
 CHECK_EVERY_MS = 30000  ##how often to look for due reminders (30 seconds)
 
-
 def loadData():
     with open(datafile, "r") as file:
         return json.load(file)
 
-
 def saveData(data):
     with open(datafile, "w") as file:
         json.dump(data, file)
-
 
 def parseTime(text):
     ##Accepts 14:30, 2:30PM or 2:30 PM. Blank means 09:00. Returns "HH:MM" or None if invalid
@@ -32,14 +29,12 @@ def parseTime(text):
             pass
     return None
 
-
 def loadReminders():
     ##Returns the data plus the reminders list, sorted by date then time
     data = loadData()
     reminders = data.setdefault("reminders", [])
     reminders.sort(key=lambda r: (r["date"], r["time"]))
     return data, reminders
-
 
 def refreshReminders(listbox):
     data, reminders = loadReminders()
@@ -49,7 +44,6 @@ def refreshReminders(listbox):
         if r.get("notified"):
             text += "  (sent)"
         listbox.insert(tk.END, text)
-
 
 def checkReminders(listbox):
     ##Looks for reminders that are due, notifies once, and marks them as sent
@@ -73,7 +67,6 @@ def checkReminders(listbox):
             addNotification("Reminder: " + r["title"])
         refreshReminders(listbox)
         showAlert("Study Planner", "\n".join(r["title"] for r in due))
-
 
 def reminderWindow(parent, listbox, heading, reminder=None, index=None):
     ##Pop-up used for both adding and editing a reminder
@@ -137,7 +130,6 @@ def reminderWindow(parent, listbox, heading, reminder=None, index=None):
     buttons.pack(pady=15)
     tk.Button(buttons, text="Save", width=10, command=save).pack(side="left", padx=5)
     tk.Button(buttons, text="Cancel", width=10, command=window.destroy).pack(side="left", padx=5)
-
 
 def viewReminders(reminders_tab):
     ##Builds everything on the Reminders tab and starts the checker
