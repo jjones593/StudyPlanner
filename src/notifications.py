@@ -9,16 +9,13 @@ datafile = Path(__file__).with_name("data.json")
 ##The notifications listbox, set when the tab is built so new notifications can refresh it
 _list = None
 
-
 def loadData():
     with open(datafile, "r") as file:
         return json.load(file)
 
-
 def saveData(data):
     with open(datafile, "w") as file:
         json.dump(data, file)
-
 
 def showAlert(title, message):
     ##Small pop-up in the bottom-right corner of the screen. Click it to close, or it closes itself after 8 seconds
@@ -51,7 +48,6 @@ def showAlert(title, message):
         child.bind("<Button-1>", close)
     popup.after(8000, close)
 
-
 def addNotification(message):
     ##Saves a notification to data.json and refreshes the Notifications tab
     data = loadData()
@@ -63,14 +59,12 @@ def addNotification(message):
     if _list is not None:
         refreshNotifications(_list)
 
-
 def refreshNotifications(listbox):
     ##Newest notification at the top
     data = loadData()
     listbox.delete(0, tk.END)
     for n in reversed(data.get("notifications", [])):
         listbox.insert(tk.END, n["time"] + "  -  " + n["message"])
-
 
 def viewNotifications(notifications_tab):
     global _list
