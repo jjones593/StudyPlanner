@@ -9,7 +9,7 @@ from addNote import addCustomNote
 from editNote import editCustomNote
 from deleteNote import deleteCustomNote
 from viewCalendar import viewCalendar
-
+from grades import viewGrades
 
 ##Code for creating our main window with its title and size 
 mainwindow = tk.Tk()
@@ -27,10 +27,12 @@ tab.pack(fill = "both", expand = True, padx = 20, pady = (0, 20))
 schoolcourses_tab = tk.Frame(tab)
 customnotes_tab = tk.Frame(tab)
 calendar_tab = tk.Frame(tab)
+grades_tab = tk.Frame(tab)
 
 tab.add(schoolcourses_tab, text = "Courses")
 tab.add(customnotes_tab, text = "Notes")
 tab.add(calendar_tab, text = "Calendar")
+tab.add(grades_tab, text = "Grades")
 ##Creating the courses and notes headings within there seperate tabs
 schoolcourses_heading = tk.Label(schoolcourses_tab, text = "courses", font = ("Arial", 12, "bold"))
 schoolcourses_heading.pack(pady = 15)
@@ -84,7 +86,7 @@ deletecustomnotes_button = tk.Button(customnotes_buttons, text = "Delete", width
 deletecustomnotes_button.pack(side = "left", padx = 5)
 
 viewCalendar(calendar_tab)
-
+viewGrades(grades_tab)
 
 
 
