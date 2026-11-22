@@ -6,7 +6,8 @@
 - US-08 Enter Grades
 - US-09 View Grades
 ## Demonstration 
-
+- A reminder tab where you can set reminders with a date, time and text.
+- 
 ## Stakeholder Feedback
 
 ## Velocity
